@@ -1,3 +1,4 @@
+
 ## Pooja Negi
 
 I build real-time systems and machine learning projects — and I tend to build them
@@ -43,12 +44,27 @@ trade-off. Every number in the README traces to the script that produced it.
 
 **[RL-Minesweeper-Lab](https://github.com/poojanegi17/RL-Minesweeper-Lab)** — *Reinforcement learning · benchmarking*
 
-A benchmark platform for how different RL algorithms learn Minesweeper — a game that
-is partially observable, sparse in reward, and genuinely unsolvable in some positions.
-Interactive visualisations of what each agent learned, and performance analysis across
-algorithms rather than a single leaderboard number.
+Five agents on one partially observable board — a CSP solver that *proves* cells safe,
+tabular Q-learning, Double DQN, PPO, and random. Same environment, same encoding, same
+2,000 evaluation boards, so what's being compared is the approaches rather than their
+inputs.
 
-**[Live demo](https://rl-minesweeper-lab.vercel.app)** · `TypeScript`
+Learning won: Double DQN reaches **77.25%** against the deduction solver's **70.35%**,
+on disjoint confidence intervals. The more interesting result is that a lookup table
+with no generalization whatsoever ties the solver too — which says more about the
+benchmark than about the agent. Every game is replayable move by move with each agent's
+own reasoning exposed: Q-values, action probabilities, the exact deductions the solver
+made.
+
+**[Live demo](https://rl-minesweeper-lab.vercel.app)** · `Python` · `PyTorch` · `Gymnasium` · `FastAPI` · `React`
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/poojanegi17/RL-Minesweeper-Lab/main/docs/media/race.gif" width="720" alt="Four agents take turns on one shared Minesweeper board: Random is eliminated on turn 5, DQN on turn 10, PPO on turn 11, and CSP clears the board on turn 14">
+</p>
+
+<p align="center">
+  <em>Four agents, one shared board. Random, DQN and PPO are eliminated in turn; CSP clears it.</em>
+</p>
 
 ---
 
@@ -67,6 +83,6 @@ search, dark mode.
 **Systems** — JavaScript/TypeScript, Node, WebSockets, PostgreSQL, CRDTs and
 operational transformation, offline-first sync
 
-**ML** — Python, reinforcement learning, model explainability, Jupyter
+**ML** — Python, PyTorch, reinforcement learning, model explainability
 
-Open to roles in distributed systems and applied ML · [LinkedIn](https://www.linkedin.com/in/pooja-negi-b45bab285) · poojaa.negi17@gmail.com 
+Open to roles in distributed systems and applied ML · [LinkedIn](https://www.linkedin.com/in/pooja-negi-b45bab285) · poojaa.negi17@gmail.com
